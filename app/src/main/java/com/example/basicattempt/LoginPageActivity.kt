@@ -8,4 +8,5 @@ class LoginPageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login_page)
     }
+    
 }
