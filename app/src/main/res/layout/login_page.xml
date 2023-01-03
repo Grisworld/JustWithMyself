@@ -10,29 +10,33 @@
         android:id="@+id/editTextTextPersonName3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="100dp"
+        android:autofillHints=""
         android:ems="10"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:orientation="vertical"
         android:text="@string/Password"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
 
     <EditText
         android:id="@+id/editTextTextPersonName2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="388dp"
+        android:layout_marginTop="380dp"
         android:autofillHints=""
         android:ems="10"
         android:inputType="textPersonName"
-        android:orientation="horizontal"
         android:minHeight="48dp"
+        android:orientation="horizontal"
         android:text="@string/e_maila_adress"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName3"
         app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName3"
-        tools:layout_editor_absoluteX="100dp" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout6"
