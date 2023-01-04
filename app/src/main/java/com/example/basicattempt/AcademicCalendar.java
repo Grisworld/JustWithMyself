@@ -1,6 +1,7 @@
 package com.example.basicattempt;
 
 import android.os.Bundle;
+import android.widget.Spinner;
 
 import com.google.android.material.tabs.TabLayout;
 
@@ -19,6 +20,7 @@ public class AcademicCalendar extends AppCompatActivity {
         tabLayout = findViewById(R.id.tabs);
         viewPager = findViewById(R.id.view_pager);
         VPAdapter vpAdapter = new VPAdapter(this);
+
         viewPager.setAdapter(vpAdapter);
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
