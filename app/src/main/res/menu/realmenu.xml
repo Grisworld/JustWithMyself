@@ -7,9 +7,9 @@
     <item
         android:id="@+id/news"
         android:title="@string/Announcements"
-        android:icon="@mipmap/news"/>
+        android:icon="@drawable/ic_baseline_newspaper_24"/>
     <item
         android:id="@+id/acts"
         android:title="@string/Actions"
-        android:icon="@mipmap/calendar"/>
+        android:icon="@drawable/ic_baseline_insert_invitation_24"/>
 </menu>

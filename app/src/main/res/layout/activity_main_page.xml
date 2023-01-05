@@ -3,13 +3,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainPage">
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        tools:layout_editor_absoluteX="11dp"
-        tools:layout_editor_absoluteY="1dp"
+        android:id="@+id/container"
+        android:layout_above="@id/bottom_navi"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </FrameLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemBackground="@color/teal_700"
+        app:menu="@menu/realmenu"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
         android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>
