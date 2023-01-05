@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:title="@string/home"
+        android:icon="@drawable/ic_home_black_24dp"/>
+    <item
+        android:id="@+id/news"
+        android:title="@string/Announcements"
+        android:icon="@mipmap/news"/>
+    <item
+        android:id="@+id/acts"
+        android:title="@string/Actions"
+        android:icon="@mipmap/calendar"/>
+</menu>
