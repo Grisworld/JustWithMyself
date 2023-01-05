@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.example.basicattempt.ui.main.HomeFragment;
+import com.example.basicattempt.ui.main.NewsFragment;
 import com.example.basicattempt.ui.main.banga;
 import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -16,6 +17,7 @@ public class MainPage extends AppCompatActivity {
 
     HomeFragment homeFragment = new HomeFragment();
     banga newbanga = new banga();
+    NewsFragment newsFragment = new NewsFragment();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +43,7 @@ public class MainPage extends AppCompatActivity {
                     return true;
                 case R.id.news:
                     getSupportFragmentManager().beginTransaction().replace(com.
-                            google.android.material.R.id.container, newbanga).commit();
+                            google.android.material.R.id.container, newsFragment).commit();
                     return true;
                 case R.id.acts:
 
