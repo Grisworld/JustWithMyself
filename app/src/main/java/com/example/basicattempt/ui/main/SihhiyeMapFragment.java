@@ -15,31 +15,6 @@ public class SihhiyeMapFragment extends Fragment {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     public SihhiyeMapFragment() {
         // Required empty public constructor
     }

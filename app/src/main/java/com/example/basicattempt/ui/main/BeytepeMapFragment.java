@@ -103,7 +103,7 @@ public class BeytepeMapFragment extends Fragment  {
         }
 
         // Load the high-resolution "zoomed-in" image.
-        final ImageView expandedImageView = requireView().findViewById(R.id.imageView2);
+        final ImageView expandedImageView = requireView().findViewById(R.id.beytepeimage);
         expandedImageView.setImageResource(imageResId);
 
         // Calculate the starting and ending bounds for the zoomed-in image.

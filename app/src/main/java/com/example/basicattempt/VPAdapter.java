@@ -9,6 +9,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.example.basicattempt.ui.main.BeytepeMapFragment;
 import com.example.basicattempt.ui.main.HomeFragment;
+import com.example.basicattempt.ui.main.SihhiyeMapFragment;
 import com.example.basicattempt.ui.main.banga;
 
 import java.util.ArrayList;
@@ -23,11 +24,11 @@ public class VPAdapter extends FragmentStateAdapter {
     @NonNull
     @Override
     public Fragment createFragment(int position) {
-        return position == 1 ? new HomeFragment() : new BeytepeMapFragment();
+        return position == 2 ? new HomeFragment() : (position == 1 ? new SihhiyeMapFragment() :new BeytepeMapFragment());
     }
 
     @Override
     public int getItemCount() {
-        return 2;
+        return 3;
     }
 }
