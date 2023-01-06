@@ -15,7 +15,7 @@
         android:layout_height="match_parent"
 
         android:scaleType="centerCrop"
-        android:visibility="invisible" />
+        android:visibility="visible" />
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
@@ -23,7 +23,6 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-
         android:scaleType="fitCenter"
         android:src="@drawable/_05154_706383079378355_265572490_o"
 

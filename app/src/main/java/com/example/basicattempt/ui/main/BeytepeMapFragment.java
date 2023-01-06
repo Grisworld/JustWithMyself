@@ -21,6 +21,8 @@ import android.widget.ImageView;
 
 import com.example.basicattempt.R;
 
+import java.util.Objects;
+
 /*
  * A simple {@link Fragment} subclass.
  * Use the {@link BeytepeMapFragment#newInstance} factory method to
@@ -84,7 +86,7 @@ public class BeytepeMapFragment extends Fragment  {
         thumb1View.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                zoomImageFromThumb(thumb1View, R.drawable._05154_706383079378355_265572490_o,view);
+                zoomImageFromThumb(thumb1View, R.drawable._05154_706383079378355_265572490_o);
             }
         });
 
@@ -93,7 +95,7 @@ public class BeytepeMapFragment extends Fragment  {
                 android.R.integer.config_shortAnimTime);
         return view;
     }
-    private void zoomImageFromThumb(final View thumbView, int imageResId, View mainView) {
+    private void zoomImageFromThumb(final View thumbView, int imageResId) {
         // If there's an animation in progress, cancel it
         // immediately and proceed with this one.
         if (currentAnimator != null) {
@@ -101,7 +103,7 @@ public class BeytepeMapFragment extends Fragment  {
         }
 
         // Load the high-resolution "zoomed-in" image.
-        final ImageView expandedImageView = (ImageView) thumbView.findViewById(R.id.imageView2);
+        final ImageView expandedImageView = requireView().findViewById(R.id.imageView2);
         expandedImageView.setImageResource(imageResId);
 
         // Calculate the starting and ending bounds for the zoomed-in image.
@@ -116,7 +118,7 @@ public class BeytepeMapFragment extends Fragment  {
         // bounds, since that's the origin for the positioning animation
         // properties (X, Y).
         thumbView.getGlobalVisibleRect(startBounds);
-        mainView.findViewById(R.id.beytepe_id)
+        getView().findViewById(R.id.beytepe_id)
                 .getGlobalVisibleRect(finalBounds, globalOffset);
         startBounds.offset(-globalOffset.x, -globalOffset.y);
         finalBounds.offset(-globalOffset.x, -globalOffset.y);
