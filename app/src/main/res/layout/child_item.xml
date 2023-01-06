@@ -14,9 +14,10 @@
         app:cardCornerRadius="40dp"
         android:layout_weight="0.5">
         <TextView
+            android:id="@+id/firsth"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/noon"
+            android:text=""
             android:textAlignment="center"
             />
     </androidx.cardview.widget.CardView>
@@ -27,9 +28,10 @@
         android:layout_weight="0.5"
         app:cardCornerRadius="40dp">
         <TextView
+            android:id="@+id/secondh"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/noon"
+            android:text=""
             android:textAlignment="center"
             />
     </androidx.cardview.widget.CardView>

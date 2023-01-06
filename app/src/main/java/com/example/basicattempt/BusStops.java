@@ -17,7 +17,7 @@ public class BusStops extends AppCompatActivity {
 
     List<String> groupList;
     List<String> childList;
-    Map<String,List<String>> mobileCollection;
+    Map<String,List<String>> hours;
     ExpandableListView expandableListView;
     ExpandableListAdapter expandableListAdapter;
     @Override
@@ -27,12 +27,21 @@ public class BusStops extends AppCompatActivity {
         createGroupList();
         createCollection();
         expandableListView = findViewById(R.id.hours);
-        expandableListAdapter = new MyExpandableListAdapter(this,groupList, mobileCollection);
+        expandableListAdapter = new MyExpandableListAdapter(this,groupList, hours);
         expandableListView.setAdapter(expandableListAdapter);
-        expandableListView.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
+        expandableListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
+            int lastExpandedPosition = -1;
             @Override
-            public boolean onGroupClick(ExpandableListView expandableListView, View view, int i, long l) {
-                return false;
+            public void onGroupExpand(int i) {
+                if(lastExpandedPosition != -1 && i != lastExpandedPosition)
+                    expandableListView.collapseGroup(lastExpandedPosition);
+                lastExpandedPosition = i;
+            }
+        });
+        expandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+            @Override
+            public boolean onChildClick(ExpandableListView expandableListView, View view, int i, int i1, long l) {
+                return true;
             }
         });
 
@@ -45,14 +54,16 @@ public class BusStops extends AppCompatActivity {
         String[] daily = {"00.00", "01.30","02.00"};
         String[] saturday = {"10.00", "11.30","02.10"};
         String[] sunday = {"05.00", "01.30","02.50"};
-        mobileCollection = new HashMap<String, List<String>>();
-        for(String group : groupList)
+        hours = new HashMap<String, List<String>>();
+        for(String group : groupList){
             if(group.equals("Hafta İçi"))
                 loadchild(daily);
             else if(group.equals("Cumartesi"))
                 loadchild(saturday);
             else
                 loadchild(sunday);
+            hours.put(group,childList);
+        }
     }
 
     private void loadchild(String[] day) {
