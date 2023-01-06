@@ -44,10 +44,6 @@ public class BusStops extends AppCompatActivity {
                 return true;
             }
         });
-
-
-
-
     }
 
     private void createCollection() {

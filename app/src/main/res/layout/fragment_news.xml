@@ -5,10 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#3A3A3A"
+    android:padding="15dp"
     tools:context=".ui.main.NewsFragment">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardviewNews"
+        android:padding="15dp"
         android:layout_width="match_parent"
         android:layout_height="210dp"
         android:layout_alignParentStart="true"
@@ -58,6 +60,7 @@
             android:layout_weight="1"
             app:cardBackgroundColor="#0DBED5"
             app:cardCornerRadius="20dp"
+
             app:contentPaddingLeft="20dp">
 
             <TextView
